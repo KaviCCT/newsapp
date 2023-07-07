@@ -16,11 +16,11 @@ const routes: Routes = [
               loadChildren: () => import('../news-categories/news-categories.module').then( m => m.NewsCategoriesPageModule)
             },
             {
-              path: ':id',
+              path: ':category',
               loadChildren: () => import('../news/news.module').then(m => m.NewsPageModule)
             },
                 {
-                  path: '',
+                  path: ':category/details',
                   loadChildren: () => import('../news-details/news-details.module').then(m => m.NewsDetailsPageModule)
                 }
           ]

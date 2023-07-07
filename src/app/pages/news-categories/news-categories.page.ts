@@ -14,13 +14,11 @@ constructor(private navController: NavController, private router: Router) { }
 	ngOnInit() {  
 	}
 
-openBusiness() {
-// Both of these would work!
-// But the standard Router is recommended.
-// this.navController.navigateForward(`/tabs/films/42`);
-this.router.navigateByUrl(`/tabs/news/42`);  
+	openCategory(category: string) {
+		this.router.navigate(['/tabs/news', category]);
+	  }
 }
 
 
-}
+
 

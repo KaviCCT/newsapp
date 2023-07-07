@@ -1,11 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>Categories</ion-title>
+<ion-header [translucent]="true" color="secondary">
+  <ion-toolbar color="secondary">
+    <ion-title >Categories</ion-title>
   </ion-toolbar>
 </ion-header>
  
-  <ion-content class="ion-padding">
+  <!-- <ion-content class="ion-padding">
   <ion-button expand="full" (click)="openBusiness()">Go to Business News with function</ion-button>
-  <ion-button expand="full" routerLink="/tabs/news/42" routerDirection="forward">Go to Business News with link</ion-button>
-  </ion-content>
+  <ion-button expand="full" routerLink="/tabs/news" [queryParams]="{ category: 'business' }">Business</ion-button>
+  <ion-button expand="full" routerLink="/tabs/news" [queryParams]="{ category: 'sport' }">Sport</ion-button>
+  <ion-button expand="full" routerLink="/tabs/news" [queryParams]="{ category: 'technology' }">Technology</ion-button>
+  <ion-button expand="full" routerLink="/tabs/news" [queryParams]="{ category: 'health' }">Health</ion-button>
+  <ion-button expand="full" routerLink="/tabs/news" [queryParams]="{ category: 'science' }">Science</ion-button>
+  <ion-button expand="full" routerLink="/tabs/news" [queryParams]="{ category: 'entertainment' }">Entertainment</ion-button>
+  <ion-button expand="full" routerLink="/tabs/news" [queryParams]="{ category: 'general' }">General</ion-button>
+</ion-content> -->
   
+
+<ion-content  class="ion-padding" color="tertiary">
+  <ion-button expand="full" (click)="openCategory('business')">Business</ion-button>
+  <ion-button expand="full" (click)="openCategory('sport')">Sport</ion-button>
+  <ion-button expand="full" (click)="openCategory('technology')">Technology</ion-button>
+  <ion-button expand="full" (click)="openCategory('health')">Health</ion-button>
+  <ion-button expand="full" (click)="openCategory('science')">Science</ion-button>
+  <ion-button expand="full" (click)="openCategory('entertainment')">Entertainment</ion-button>
+  <ion-button expand="full" (click)="openCategory('general')">General</ion-button>
+</ion-content>
